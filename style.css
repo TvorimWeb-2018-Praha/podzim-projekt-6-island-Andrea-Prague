@@ -15,7 +15,8 @@ body {
     font-family: 'Merriweather', serif;
     font-size: 16px;
     line-height: 1.6; 
-    max-width: 405px; 
+    /* Davam na pevno max-width, protoze obrazky z galerie se mi nedari zvetsit */
+    width: 405px; 
     margin: auto;
     border: solid 0.5px;
 }
@@ -32,7 +33,6 @@ h2, p{
     text-align: center;
     padding: 20px;
     background-image: url("images/island-hlavicka.jpg");
-    background-repeat: no-repeat;
     background-size: cover;   
 }
 
@@ -40,6 +40,7 @@ h2, p{
     font-size: 1000;
     margin: 0;
     padding: 14px;
+    font-style: italic;
 }
 
 .perex{
@@ -88,8 +89,6 @@ a:hover{
     color: white;
 }
 
-
-
 /* OBSAH */
 
 img{
@@ -115,7 +114,7 @@ h2{
 
 /* FOTOGALERIE */
 .foto{
-    text-align: center;
+    text-align: center;  
 }
 .foto .popisek{
     font-weight: 600;
@@ -138,4 +137,131 @@ h2{
 
 .paticka a{
     text-decoration: underline;
+}
+
+@media (min-width: 500px){
+    body{
+        width: 802px;
+    }
+
+    /* MENU */
+    .menu{
+        display: flex;
+        flex-direction: row;
+        padding: 10px 40px;  
+    }
+
+    ul{
+        justify-content: space-between;
+        margin: 0;
+        display: block;
+    }
+
+    li{
+        border: none;        
+    }
+
+    /* FOTOGALERIE */
+    .galerie{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .foto{
+        height: 225px;
+        overflow: hidden;
+    }
+}
+
+@media(min-width: 1000px){
+    body{
+       width: 1200px;
+
+    }
+
+    .hlavicka{
+        height: 500px; 
+    }
+
+    h1{
+        font-size: 58px;
+    }
+    .titulek{
+        padding: 30px;
+    }
+
+    .autor{
+        padding: 20px;
+    }
+
+    .perex{
+        padding-bottom: 50px;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        width: 33.3%;
+        float: left;
+        text-align: left;
+    }
+
+    .uvod, .videt{
+        padding-left: 320px;
+    }
+
+    .proc{
+        padding-right: 320px;
+    }
+
+    .obsah{
+        width: 960px;
+        background-color: white;
+        margin: -80px auto;
+    }
+
+      /* FOTOGALERIE */
+      .foto{
+          width: 33.3%;
+          height: 179.8px;
+          position: relative;
+      }
+
+      .foto .popisek{
+          background-color: rgba(0, 0, 0, 0.5);
+          color: white;
+          font-size: 10px;
+          padding: 5px 0px;
+      }
+      .foto a{
+          color: white;
+      }
+
+      .foto img{
+          display: block;
+      }
+
+      .foto:hover .popisek{
+          position: absolute;
+          bottom: 0;
+          transition: 0.5s ease-out;
+      }
+
+      .foto:hover img{
+        transform: scale(1.1);
+        transition: 0.5s ease-in-out;
+    }
+
+      .popisek{
+          width: 100%;
+          margin: 0;
+          bottom: -100%;
+      }
+
+      .paticka{
+        box-shadow: none;
+        height: 100%;
+      }
+
 }
