@@ -173,13 +173,23 @@ h2::after{
 
     li{
         border-top: rgba(139, 139, 139, 0.712) solid 1px;
-        border-inline-end: rgba(139, 139, 139, 0.712) solid 1px;
         display: block;      
         flex-grow: 2;
     }
 
     /* OBSAH */
-   
+    .popisek{
+        position: relative;
+        bottom: 30px;
+        text-align: right;
+        color: white;
+        padding-right: 5px;
+    }
+
+    .popisek a{
+        color: white;
+    }
+
 
     /* FOTOGALERIE */
     .galerie{
@@ -192,12 +202,15 @@ h2::after{
         height: 225px;
         overflow: hidden;
     }
+
+    .galerie .popisek{
+        opacity: 0;
+    }
 }
 
 @media(min-width: 1000px){
     body{
        width: 1200px;
-
     }
 
     /* OBSAH */
@@ -238,6 +251,10 @@ h2::after{
         padding-right: 320px;
     }
 
+    li{
+        border-top: none;
+    }
+
     /* OBSAH */
     .obsah{
         width: 960px;
@@ -271,6 +288,7 @@ h2::after{
           position: absolute;
           bottom: 0;
           transition: 0.5s ease-out;
+          opacity: 1;
       }
 
       .foto:hover img{
@@ -282,6 +300,7 @@ h2::after{
           width: 100%;
           margin: 0;
           bottom: -100%;
+          text-align: center;
       }
 
     /* PATICKA */
