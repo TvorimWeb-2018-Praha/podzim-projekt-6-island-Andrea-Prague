@@ -33,14 +33,15 @@ h2, p{
     text-align: center;
     padding: 20px;
     background-image: url("images/island-hlavicka.jpg");
-    background-size: cover;   
+    background-size: cover; 
+    background-position: center;  
 }
 
 .titulek{
     font-size: 1000;
     margin: 0;
     padding: 14px;
-    font-style: italic;
+    font-family: 'Relaway', sans-serif;
 }
 
 .perex{
@@ -48,14 +49,22 @@ h2, p{
 }
 
 .autor{
-    color: rgba(255, 255, 255, 0.5);
-    border-top: rgba(255, 255, 255, 0.5) solid;
-    display: inline;
+    color: rgba(255, 255, 255, 0.7);
     padding: 10px;
     padding-bottom: 30px;
     font-family: 'Merriweather', sans-serif;
     font-style: italic;
     margin: 0;
+    
+}
+
+.autor::before{
+    content: '';
+    border-top: 3px solid rgba(255, 255, 255, 0.7);
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    padding: 8px
 }
 
 /* MENU */
@@ -68,10 +77,11 @@ h2, p{
     padding: 0;
 }
 
-a{
+.menu a{
     text-decoration: none;
     color: rgba(139, 139, 139, 0.712);
     font-size: 12px;
+    display: block;
 }
 
 li{
@@ -79,10 +89,9 @@ li{
     border-bottom:  rgba(139, 139, 139, 0.712) solid 1px;
 }
 
+
 li:hover{
     background-color: rgba(139, 139, 139, 0.712);
-    display: block;
-    margin:0;
 }
 
 a:hover{
@@ -90,7 +99,6 @@ a:hover{
 }
 
 /* OBSAH */
-
 img{
     max-width: 100%;
 }
@@ -101,23 +109,31 @@ img{
     margin-top: 0;
     text-align: center;
     padding: 0;
+    font-family: 'Relaway', sans-serif;
 }
 
 .popisek a{
-    text-decoration: underline;
+    color: rgba(139, 139, 139, 0.712);
 }
 
 h2{
     font-family: 'Relaway', sans-serif;
 }
 
+h2::after{
+    border-bottom: solid rgb(114, 114, 238);
+    display: block;
+    content: '';
+    width: 60px;
+    padding: 10px;
+}
 
 /* FOTOGALERIE */
 .foto{
     text-align: center;  
 }
 .foto .popisek{
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .foto .popisek-copy{
@@ -126,7 +142,6 @@ h2{
 
 
 /* PATICKA */
-
 .paticka{
     font-size: 12px;
     color: rgba(139, 139, 139, 0.712);
@@ -136,7 +151,7 @@ h2{
 }
 
 .paticka a{
-    text-decoration: underline;
+    color: rgba(139, 139, 139, 0.712);
 }
 
 @media (min-width: 500px){
@@ -144,22 +159,27 @@ h2{
         width: 802px;
     }
 
-    /* MENU */
+    /* MENU */   
     .menu{
         display: flex;
         flex-direction: row;
         padding: 10px 40px;  
+        justify-content: space-between;
     }
 
     ul{
-        justify-content: space-between;
         margin: 0;
-        display: block;
     }
 
     li{
-        border: none;        
+        border-top: rgba(139, 139, 139, 0.712) solid 1px;
+        border-inline-end: rgba(139, 139, 139, 0.712) solid 1px;
+        display: block;      
+        flex-grow: 2;
     }
+
+    /* OBSAH */
+   
 
     /* FOTOGALERIE */
     .galerie{
@@ -180,13 +200,15 @@ h2{
 
     }
 
+    /* OBSAH */
     .hlavicka{
-        height: 500px; 
+        height: 500px;    
     }
 
     h1{
         font-size: 58px;
     }
+
     .titulek{
         padding: 30px;
     }
@@ -199,6 +221,7 @@ h2{
         padding-bottom: 50px;
     }
 
+    /* MENU */
     .menu{
         display: flex;
         flex-direction: column;
@@ -215,10 +238,12 @@ h2{
         padding-right: 320px;
     }
 
+    /* OBSAH */
     .obsah{
         width: 960px;
         background-color: white;
         margin: -80px auto;
+        box-shadow: 0px 0px 5px 5px rgba(202, 201, 201,0.3);
     }
 
       /* FOTOGALERIE */
@@ -259,9 +284,10 @@ h2{
           bottom: -100%;
       }
 
+    /* PATICKA */
       .paticka{
         box-shadow: none;
-        height: 100%;
+        padding: 120px;
       }
 
 }
