@@ -164,7 +164,6 @@ h2::after{
         display: flex;
         flex-direction: row;
         padding: 10px 40px;  
-        justify-content: space-between;
     }
 
     ul{
@@ -173,8 +172,14 @@ h2::after{
 
     li{
         border-top: rgba(139, 139, 139, 0.712) solid 1px;
+        border-right: rgba(139, 139, 139, 0.712) solid 1px;
         display: block;      
         flex-grow: 2;
+    }
+
+    .posledni_menu{
+        border-right: none;
+
     }
 
     /* OBSAH */
@@ -189,7 +194,6 @@ h2::after{
     .popisek a{
         color: white;
     }
-
 
     /* FOTOGALERIE */
     .galerie{
