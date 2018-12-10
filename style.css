@@ -200,7 +200,6 @@ h2::after{
 
     .foto{
         height: 225px;
-        overflow: hidden;
     }
 
     .galerie .popisek{
@@ -251,8 +250,6 @@ h2::after{
         padding-right: 320px;
     }
 
-   
-
     li{
         border-top: none;
         border-right: none;
@@ -267,49 +264,50 @@ h2::after{
     }
 
       /* FOTOGALERIE */
-      .foto{
-          width: 33.3%;
-          height: 179.8px;
-          position: relative;
-      }
+    .foto{
+        height: 179.8px;
+        width: 33.3%;
+        position: relative;
+    }
 
-      .foto .popisek{
-          background-color: rgba(0, 0, 0, 0.5);
-          color: white;
-          font-size: 10px;
-          padding: 5px 0px;
-      }
-      .foto a{
-          color: white;
-      }
+    .foto .popisek{
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 10px;
+        padding: 5px 0px;
+    }
 
-      .foto img{
-          display: block;
-      }
+    .foto a{
+        color: white;
+    }
 
-      .foto:hover .popisek{
-          position: absolute;
-          bottom: 0;
-          transition: 0.5s ease-out;
-          opacity: 1;
-      }
+    .foto img{
+        display: block;
+    }
 
-      .foto:hover img{
+    .foto:hover .popisek{
+        position: absolute;
+        bottom: 0;
+        transition: 0.5s ease-out;
+        opacity: 1;
+    }
+
+    .foto:hover img{
         transform: scale(1.1);
         transition: 0.5s ease-in-out;
     }
 
-      .popisek{
-          width: 100%;
-          margin: 0;
-          bottom: -100%;
-          text-align: center;
-      }
+    .popisek{
+        width: 100%;
+        margin: 0;
+        bottom: -100%;
+        text-align: center;
+    }
 
     /* PATICKA */
-      .paticka{
+    .paticka{
         box-shadow: none;
         padding: 120px;
-      }
+    }
 
 }
